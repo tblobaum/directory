@@ -16,8 +16,8 @@ of the schemas for your models. The call to directory will require all of the
 module.exports = function (models, options) {
   options = options || { debug:false }
 
-  require('directory')(function (module) {
-    models.model(module.name, module, options)
+  require('directory')(function (module, name) {
+    models.model(name, module, options)
   })
 
 }
@@ -28,8 +28,8 @@ Require a different directory:
 
 ```javascript
 
-require('directory')(__dirname + '/plugins', function (plugin) {
-  models.plugin(plugin, options)
+require('directory')(__dirname + '/plugins', function (module, name) {
+  models.plugin(module, options)
 })
 
 ````
