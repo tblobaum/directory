@@ -6,9 +6,9 @@ path is either a file or a directory.
 Example
 -------
 
-As an example, this may be your index.js file in a plugins directory that also 
-contains all of your plugins. The call to directroy will require all of the 
-other plugins in the current directory and apply them to your models.
+As an example, this may be your index.js file in a directory that contains all 
+of the plugins for your models. The call to directroy will require all of the 
+other files in the current directory and apply them to your models.
 
 ```javascript
 
