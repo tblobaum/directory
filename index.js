@@ -10,7 +10,7 @@ module.exports = function modulate(dirname, callback) {
   dirname = dirname || __dirname
   var paths = require('findit').sync(dirname)
   paths.forEach(function (path) {
-    if (!path.match(module.id)) callback(require(path))
+    if (!path.match(module.parent.id)) callback(require(path))
   })
 }
 
