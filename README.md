@@ -20,7 +20,7 @@ var directory = require('directory')
 module.exports = function (mongoose, options) {
   options = options || { debug:false }
 
-  directory(__dirname, function (module) {
+  directory(function (module) {
     mongoose.plugin(module, options)
   })
 
