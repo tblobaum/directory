@@ -6,11 +6,20 @@
  */
 
 module.exports = function modulate(dirname, callback) {
-  callback = callback || dirname
-  dirname = dirname || module.parent.paths[0].split("node_modules")[0]
+
+  if (!callback) {
+    var callback = dirname
+  }
+  
+  if (typeof dirname == 'function') {
+    var dirname = module.parent.paths[0].split("node_modules")[0]
+  }
+  
   var paths = require('findit').sync(dirname)
+  
   paths.forEach(function (path) {
     if (!path.match(module.parent.id)) callback(require(path))
   })
+  
 }
 

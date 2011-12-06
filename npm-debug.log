@@ -56,44 +56,44 @@ silly testEngine   path: '/home/tom/Apps/node-directory',
 silly testEngine   bundleDependencies: [] }
 verbose caching package.json
 verbose loadDefaults directory@0.0.4
-verbose pack /home/tom/Apps/node-directory /tmp/npm-1323179643922/1323179643922-0.63546954956837/tmp.tgz
+verbose pack /home/tom/Apps/node-directory /tmp/npm-1323179675029/1323179675029-0.7149686256889254/tmp.tgz
 silly makeList /home/tom/Apps/node-directory
-verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179643922'
-verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179643922/1323179643922-0.63546954956837'
-verbose mkdir done: /tmp/npm-1323179643922/1323179643922-0.63546954956837 755
-verbose mkdir'ed /tmp/npm-1323179643922/1323179643922-0.63546954956837
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179675029'
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179675029/1323179675029-0.7149686256889254'
+verbose mkdir done: /tmp/npm-1323179675029/1323179675029-0.7149686256889254 755
+verbose mkdir'ed /tmp/npm-1323179675029/1323179675029-0.7149686256889254
 verbose tar about to write tar and gzip it.
 silly tar args [ '-czvf', '-', '-T', '-' ]
 silly spawning [ 'tar', [ '-czvf', '-', '-T', '-' ], '/home/tom/Apps' ]
-verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents'
-verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm'
-verbose mkdir done: /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm 755
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents'
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm'
+verbose mkdir done: /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm 755
 verbose unpack_ uid, gid [ undefined, undefined ]
-verbose unpackTarget /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package
+verbose unpackTarget /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package
 silly gunzTarPerm modes [ '755', '644' ]
 silly spawning [ 'tar',
 silly spawning   [ '-zmvxpf',
-silly spawning     '/tmp/npm-1323179643922/1323179643922-0.63546954956837/tmp.tgz' ],
-silly spawning   '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm' ]
+silly spawning     '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/tmp.tgz' ],
+silly spawning   '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm' ]
 silly tar out node-directory/package.json
 silly tar out node-directory/.gitignore
 silly tar out node-directory/index.js
 silly tar out node-directory/README.md
 silly tar exit 0
-silly asyncMap in gTP /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory
-silly asyncMap in gTP /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory/package.json
-silly asyncMap in gTP /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory/.gitignore
-silly asyncMap in gTP /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory/index.js
-silly asyncMap in gTP /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory/README.md
+silly asyncMap in gTP /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory
+silly asyncMap in gTP /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory/package.json
+silly asyncMap in gTP /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory/.gitignore
+silly asyncMap in gTP /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory/index.js
+silly asyncMap in gTP /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory/README.md
 silly chmod node-directory 755
 silly chmod package.json 644
 silly chmod .gitignore 644
 silly chmod index.js 644
 silly chmod README.md 644
-verbose gunzed /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory
-verbose rm'ed /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package
-verbose renamed [ '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/___package.npm/node-directory',
-verbose renamed   '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package' ]
+verbose gunzed /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory
+verbose rm'ed /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package
+verbose renamed [ '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/___package.npm/node-directory',
+verbose renamed   '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package' ]
 silly testEngine { author: 
 silly testEngine    { name: 'Thomas Blobaum',
 silly testEngine      email: 'tblobaum@gmail.com',
@@ -114,19 +114,19 @@ silly testEngine   _engineSupported: true,
 silly testEngine   _npmVersion: '1.0.105',
 silly testEngine   _nodeVersion: 'v0.6.1',
 silly testEngine   _defaultsLoaded: true,
-silly testEngine   path: '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package' }
-verbose caching /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package/package.json
+silly testEngine   path: '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package' }
+verbose caching /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package/package.json
 verbose loadDefaults directory@0.0.4
 verbose tarball contents [ 'package' ]
-verbose from cache /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package/package.json
-verbose pack /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package /home/tom/.npm/directory/0.0.4/package.tgz
-silly makeList /tmp/npm-1323179643922/1323179643922-0.63546954956837/contents/package
+verbose from cache /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package/package.json
+verbose pack /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package /home/tom/.npm/directory/0.0.4/package.tgz
+silly makeList /tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents/package
 verbose mkdir'ed /home/tom/.npm/directory/0.0.4
 verbose tar about to write tar and gzip it.
 silly tar args [ '-czvf', '-', '-T', '-' ]
 silly spawning [ 'tar',
 silly spawning   [ '-czvf', '-', '-T', '-' ],
-silly spawning   '/tmp/npm-1323179643922/1323179643922-0.63546954956837/contents' ]
+silly spawning   '/tmp/npm-1323179675029/1323179675029-0.7149686256889254/contents' ]
 verbose mkdir (expected) error ENOENT, no such file or directory '/home/tom/.npm/directory/0.0.4/___package.npm'
 verbose mkdir done: /home/tom/.npm/directory/0.0.4/___package.npm 755
 verbose unpack_ uid, gid [ undefined, undefined ]
@@ -171,12 +171,12 @@ silly testEngine   _npmVersion: '1.0.105',
 silly testEngine   _nodeVersion: 'v0.6.1',
 silly testEngine   _defaultsLoaded: true,
 silly testEngine   dist: 
-silly testEngine    { shasum: '4f5c38ce534cfc88edd4f35ed185cb86a521ab46',
+silly testEngine    { shasum: 'c81fcf975c1ed734788127cca0dda954f4ae4d34',
 silly testEngine      tarball: 'http://registry.npmjs.org/directory/-/directory-0.0.4.tgz' } }
 verbose caching /home/tom/.npm/directory/0.0.4/package/package.json
 verbose loadDefaults directory@0.0.4
-silly updated sha bytes 826
-info shasum 4f5c38ce534cfc88edd4f35ed185cb86a521ab46
+silly updated sha bytes 828
+info shasum c81fcf975c1ed734788127cca0dda954f4ae4d34
 info shasum /home/tom/.npm/directory/0.0.4/package.tgz
 verbose from cache /home/tom/.npm/directory/0.0.4/package/package.json
 verbose chmod /home/tom/.npm/directory/0.0.4/package.tgz 644
@@ -202,7 +202,7 @@ silly publish   _npmVersion: '1.0.105',
 silly publish   _nodeVersion: 'v0.6.1',
 silly publish   _defaultsLoaded: true,
 silly publish   dist: 
-silly publish    { shasum: '4f5c38ce534cfc88edd4f35ed185cb86a521ab46',
+silly publish    { shasum: 'c81fcf975c1ed734788127cca0dda954f4ae4d34',
 silly publish      tarball: 'http://registry.npmjs.org/directory/-/directory-0.0.4.tgz' } }
 verbose PUT directory
 verbose raw, before any munging directory
