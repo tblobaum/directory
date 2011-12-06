@@ -1,14 +1,15 @@
 node-directory
 =========
-A simple module to require all of the other paths in the current directory. A 
-path is either a file or a directory.
+A module to require all files and directories inside a directory.  By 
+default requires all files in the current directory except itself, and maps 
+them to a callback.
 
 Example
 -------
 
 As an example, this may be your index.js file in a directory that contains all 
-of the plugins for your models. The call to directroy will require all of the 
-other files in the current directory and apply them to your models.
+of the plugins for your models. The call to directory will require all of the 
+other files in the current directory and loop through them.
 
 ```javascript
 
@@ -29,6 +30,11 @@ Installation
 ------------
 
     npm install directory --save
+
+Usage
+-----
+
+require('directory')([dirname,] callback)
 
 
 MIT License
