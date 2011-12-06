@@ -7,7 +7,8 @@ Example
 -------
 
 As an example, this may be your index.js file in a plugins directory that also 
-contains all of your Model's plugins.
+contains all of your plugins. The call to directroy will require all of the 
+other plugins in the current directory and apply them to your models.
 
 ```javascript
 
