@@ -1,4 +1,4 @@
-directory
+node-directory
 =========
 A simple module to require all of the other paths in the current directory. A 
 path is either a file or a directory.
@@ -15,14 +15,13 @@ Example
 
 ```javascript
 
-var plugins = {}
-  , directory = require('directory')
+var directory = require('directory')
 
-module.exports = function (Mongoose, options) {
+module.exports = function (mongoose, options) {
   options = options || { debug:false }
 
   directory(__dirname, function (module) {
-    Mongoose.plugin(module, options)
+    mongoose.plugin(module, options)
   })
 
 }
