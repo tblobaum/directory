@@ -1,0 +1,18 @@
+{
+  "author": "Thomas Blobaum <tblobaum@gmail.com> (https://github.com/tblobaum)",
+  "name": "module",
+  "description": "require all other paths in the current directory",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tblobaum/node-module.git"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "engines": {
+    "node": "~0.6.1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
