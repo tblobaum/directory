@@ -17,14 +17,9 @@ Example
 
 var directory = require('directory')
 
-module.exports = function (mongoose, options) {
-  options = options || { debug:false }
-
-  directory(function (module) {
-    mongoose.plugin(module, options)
-  })
-
-}
+directory(function (module) {
+  mongoose.plugin(module, {})
+})
 
 ````
 
