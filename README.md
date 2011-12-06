@@ -43,7 +43,7 @@ Usage
 -----
 
 require('directory')([dirname,] callback)
-
+-----------------------------------------
 
 MIT License
 
