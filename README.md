@@ -28,7 +28,7 @@ Require a different directory:
 
 ```javascript
 
-require('directory')(__dirname + '/plugins', function (module, name) {
+require('directory')(__dirname + '/plugins/', function (module, name) {
   models.plugin(module, options)
 })
 
