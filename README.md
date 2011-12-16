@@ -42,7 +42,7 @@ Installation
 Usage
 -----
 
-require('directory')([dirname,] callback)
+require('directory')([dirname,] iterator)
 -----------------------------------------
 
 MIT License
