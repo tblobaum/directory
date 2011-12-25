@@ -4,29 +4,29 @@
  * Copyright(c) Thomas Blobaum
  * MIT Licensed
  */
-
+ 
 function modulate (dirname, callback) {
 
-  if (!callback) {
-    var callback = dirname
-  }
+  if (!callback) 
+    callback = dirname
   
-  if (typeof dirname == 'function') {
-    var dirname = module.parent.paths[0].split("node_modules")[0]
-  }
+  if (typeof dirname == 'function') 
+    dirname = module.parent.paths[0].split("node_modules")[0]
 
+  console.log('requiring directory ... ', dirname)
   
   var paths = require('findit').sync(dirname)
-  
-  paths.forEach(function (path) {
-    if (!path.match(module.parent.id)) {  
+  for (var l = paths.length, a=0; a < l; a++) {
+    var path = paths[a]
+    if (!path.match(module.parent.id) || module.parent.id === '.') {  
       var filename = path.split(dirname)[1].split(".js")[0]
+      console.log(' * ... ', filename)
       callback(require(path), filename)
     }
-  })
-  
-  delete require.cache[__filename]
+  }
+
 }
 
+delete require.cache[__filename]
 module.exports = modulate
 

@@ -8,12 +8,13 @@
     "url": "git://github.com/tblobaum/node-directory.git"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "node test/directory"
   },
   "engines": {
     "node": "~0.6.1"
   },
   "dependencies": {
+    "sequence": "x",
     "findit": "~0.1.2"
   },
   "devDependencies": {}
