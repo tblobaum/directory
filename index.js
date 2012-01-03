@@ -4,7 +4,10 @@
  * Copyright(c) Thomas Blobaum
  * MIT Licensed
  */
- 
+
+var path = require('path')
+  , fs = require('fs')
+
 function modulate (dirname, callback) {
 
   if (!callback) 
@@ -15,11 +18,12 @@ function modulate (dirname, callback) {
 
   console.log('requiring directory ... ', dirname)
   
-  var paths = require('findit').sync(dirname)
+  var paths = fs.readdirSync(dirname)
   for (var l = paths.length, a=0; a < l; a++) {
-    var path = paths[a]
+    var path = dirname + paths[a]
     if (!path.match(module.parent.id) || module.parent.id === '.') {  
       var filename = path.split(dirname)[1].split(".js")[0]
+      //var filename = path.split(".js")[0]
       console.log(' * ... ', filename)
       callback(require(path), filename)
     }

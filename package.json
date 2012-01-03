@@ -2,7 +2,7 @@
   "author": "Thomas Blobaum <tblobaum@gmail.com> (https://github.com/tblobaum)",
   "name": "directory",
   "description": "require everything in a directory",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "git://github.com/tblobaum/node-directory.git"
@@ -13,9 +13,6 @@
   "engines": {
     "node": "~0.6.1"
   },
-  "dependencies": {
-    "sequence": "x",
-    "findit": "~0.1.2"
-  },
+  "dependencies": {  },
   "devDependencies": {}
 }
