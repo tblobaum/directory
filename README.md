@@ -1,35 +1,23 @@
-node-directory
-=========
-A simple module to require all files and directories inside a directory.  By 
-default it requires all files in the current directory except itself, and maps 
-them to a callback.
+# node-directory
+require all files and directories inside a directory
 
-Example
--------
-
-As an example, this may be your index.js file in a directory that contains all 
-of the schemas for your models. The call to directory will require all of the 
-(other) files in the current directory and loop through them.
+## Example
+As an example, this may be your index.js file in a directory 
 
 ```javascript
 
-module.exports = function (models, options) {
-  options = options || { debug:false }
-
-  require('directory')(function (module, name) {
-    models.model(name, module, options)
-  })
-
-}
+require('directory')(function (module, name) {
+  exports[name] = module
+})
 
 ````
 
-Require a different directory:
+Or require a different directory
 
 ```javascript
 
 require('directory')(__dirname + '/plugins/', function (module, name) {
-  models.plugin(module, options)
+  exports[name] = module
 })
 
 ````
@@ -37,7 +25,7 @@ require('directory')(__dirname + '/plugins/', function (module, name) {
 Installation
 ------------
 
-    npm install directory --save
+    npm install directory
 
 Usage
 -----
