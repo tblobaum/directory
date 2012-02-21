@@ -5,13 +5,13 @@
   "version": "0.0.9",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tblobaum/node-directory.git"
+    "url": "git://github.com/tblobaum/directory.git"
   },
   "scripts": {
-    "test": "make test"
+    "test": "npm link && make test"
   },
   "engines": {
-    "node": "~0.6.1"
+    "node": ">=0.6.1"
   },
   "dependencies": {  
   },
