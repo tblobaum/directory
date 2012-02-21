@@ -1,6 +1,6 @@
 
 /*!
- * node-directory
+ * directory
  * Copyright(c) Thomas Blobaum
  * MIT Licensed
  */
@@ -8,29 +8,49 @@
 var path = require('path')
   , fs = require('fs')
 
-function modulate (dirname, callback) {
+function directory (dirname, callback) {
 
-  if (!callback) 
-    callback = dirname
+  // dirname and callback are sent
+  if (typeof dirname === 'string' && typeof callback === 'function') {
+    return require_directory(dirname, callback)
+  }
   
-  if (typeof dirname == 'function') 
-    dirname = module.parent.paths[0].split("node_modules")[0]
-
-  console.log('requiring directory ... ', dirname)
+  // only dirname is sent
+  if (typeof dirname === 'string' && typeof callback === 'undefined') {
+    return require_directory(dirname, function () {})
+  }
   
-  var paths = fs.readdirSync(dirname)
-  for (var l = paths.length, a=0; a < l; a++) {
-    var path = dirname + paths[a]
-    if (!path.match(module.parent.id) || module.parent.id === '.') {  
-      var filename = path.split(dirname)[1].split(".js")[0]
-      //var filename = path.split(".js")[0]
-      console.log(' * ... ', filename)
-      callback(require(path), filename)
-    }
+  // only callback is sent
+  if (typeof dirname === 'function' && typeof callback === 'undefined') {
+    // 12 is the length of node_modules
+    return require_directory(module.parent.paths[0].slice(0, -12), dirname)
+  }
+  
+  // no arguments
+  if (typeof dirname === 'undefined' && typeof callback === 'undefined') {
+    return require_directory(module.parent.paths[0].slice(0, -12), function () {})
   }
 
 }
 
+function require_directory (dirname, callback) {
+  var paths = fs.readdirSync(dirname)
+    , fns = {}
+    
+  for (var l = paths.length, a=0; a < l; a++) {
+    var path = dirname + paths[a]
+    if (!path.match(module.parent.id) || module.parent.id === '.') {  
+      var filename = path.split(dirname)[1].split(".js")[0]
+        , fn = require(path)
+      fns[filename] = fn
+      callback(fn, filename)
+    }
+  }
+  return fns
+}
+
+// delete 'directory' (this file) from the cache
 delete require.cache[__filename]
-module.exports = modulate
+
+module.exports = directory
 
