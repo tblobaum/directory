@@ -1,37 +1,44 @@
-# node-directory
-require all files and directories inside a directory
+# directory
+[![Build Status](https://secure.travis-ci.org/tblobaum/directory.png)](http://travis-ci.org/tblobaum/directory) 
+
+require all files and directories inside a directory synchronously
 
 ## Example
-As an example, this may be your index.js file in a directory 
+Any of the below
 
 ```javascript
 
+// return an object hash
+var dir = require('directory')
+
+// or pass a callback
 require('directory')(function (module, name) {
   exports[name] = module
 })
 
-````
+// or pass a different path
+var dir = require('directory')(__dirname +'/../plugins/')
 
-Or require a different directory
-
-```javascript
-
-require('directory')(__dirname + '/plugins/', function (module, name) {
+// or pass both
+var dir = require('directory')(__dirname +'/plugins/', function (module, name) {
   exports[name] = module
 })
 
 ````
 
-Installation
-------------
+## Installation
 
-    npm install directory
+`npm install directory`
 
-Usage
------
+## Usage
 
-require('directory')([dirname,] iterator)
------------------------------------------
+require('directory')([dirname, iterator])
 
-MIT License
+## Tests
+
+`npm install mocha -g` and `make test`
+
+## License
+
+MIT 
 
