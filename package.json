@@ -8,7 +8,7 @@
     "url": "git://github.com/tblobaum/node-directory.git"
   },
   "scripts": {
-    "test": "node test/directory"
+    "test": "make test"
   },
   "engines": {
     "node": "~0.6.1"
