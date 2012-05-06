@@ -1,7 +1,7 @@
 
 // Dependencies
 var assert = require('assert')
-  , directory = require(__dirname +'/../')
+  , directory = require(__dirname +'/..')
 
 // Run tests
 describe('directory', function () {
